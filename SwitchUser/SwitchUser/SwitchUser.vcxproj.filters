@@ -20,8 +20,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="..\..\..\..\..\smo\source\repos\ConsoleApp18\ConsoleApplication3\UserTileMenu.idl">
+    <Midl Include="UserTileMenu.idl">
       <Filter>Source Files</Filter>
     </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UserTileMenu.winmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UserTileMenu_h.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

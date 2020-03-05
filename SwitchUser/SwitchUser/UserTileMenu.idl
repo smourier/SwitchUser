@@ -1,0 +1,49 @@
+import "Windows.Foundation.idl";
+import "Windows.Storage.idl";
+
+//
+// internal API, use at your own risk!
+//
+// note: if manual compile, usse 'midl /winrt /metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix'
+
+namespace Windows
+{
+	namespace Internal
+	{
+		namespace Shell
+		{
+			namespace StartUI
+			{
+				[contract(Windows.Foundation.UniversalApiContract, 1.0)]
+				[uuid(94432454-c6ac-40c0-ba40-d5c31a0c5136)]
+				interface IUserTileSwitchUser : IInspectable
+				{
+					HRESULT get_DisplayName([out][retval] HSTRING* name);
+					HRESULT get_UserSid([out][retval] HSTRING* sid);
+					HRESULT get_IsTabletMode([out][retval] boolean* mode);
+					HRESULT GetAccountPicture([out] Windows.Storage.IStorageFile** picture);
+					HRESULT SwitchTo();
+				}
+
+				[contract(Windows.Foundation.UniversalApiContract, 1.0)]
+				[exclusiveto(Windows.Internal.Shell.StartUI.UserTileMenu)]
+				[uuid(1727f7b0-3bd5-4256-8e75-680f9f6cadb4)]
+				interface IUserTileMenuStatics : IInspectable
+				{
+					HRESULT UndefinedDontUse();
+					HRESULT GetSwitchUserList([out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileSwitchUser*>** view);
+					HRESULT GetSwitchUserListWithCurrentUser([out] Windows.Internal.Shell.StartUI.IUserTileSwitchUser** user, [out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileSwitchUser*>** view);
+				}
+
+				[activatable(Windows.Foundation.UniversalApiContract, 1.0)]
+				[contract(Windows.Foundation.UniversalApiContract, 1.0)]
+				[marshaling_behavior(agile)]
+				[threading(both)]
+				runtimeclass UserTileMenu
+				{
+					[default] interface Windows.Internal.Shell.StartUI.IUserTileMenuStatics;
+				}
+			}
+		}
+	}
+}

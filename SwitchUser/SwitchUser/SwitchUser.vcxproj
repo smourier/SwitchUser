@@ -150,16 +150,22 @@
     <ClCompile Include="SwitchUser.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="..\..\..\..\..\smo\source\repos\ConsoleApp18\ConsoleApplication3\UserTileMenu.idl">
+    <Midl Include="UserTileMenu.idl">
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EnableWindowsRuntime>
-      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableWindowsRuntime>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableWindowsRuntime>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableWindowsRuntime>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableWindowsRuntime>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\windows.foundation.foundationcontract\3.0.0.0" /nomidl  /ns_prefix %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UserTileMenu.winmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UserTileMenu_h.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
