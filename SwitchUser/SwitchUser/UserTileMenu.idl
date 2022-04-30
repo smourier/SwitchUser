@@ -29,7 +29,6 @@ namespace Windows
 				[uuid(65d0daac-bc3d-45ab-8628-d3f30415135c)]
 				interface IUserTileCommand : IInspectable
 				{
-					//HRESULT get_Destination([out][retval] int* jumpViewItemType);
 					HRESULT get_Id([out][retval] int* id);
 					HRESULT Invoke();
 				}
