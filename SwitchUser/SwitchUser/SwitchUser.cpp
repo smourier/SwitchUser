@@ -52,8 +52,37 @@ int main()
 		wprintf(L"Current user:\n %s (SID:%s)\n", cname.GetRawBuffer(nullptr), csid.GetRawBuffer(nullptr));
 		wprintf(L"\n");
 
-		// get number of switchable users
+		// get commands
+		ComPtr<IVectorView<IUserTileCommand*>> commands;
+		hr = menu->GetCommands(&commands);
+		if (FAILED(hr))
+		{
+			wprintf(L"GetCommands failed\n");
+			goto cleanup;
+		}
+
 		unsigned int count;
+		commands->get_Size(&count);
+
+		for (unsigned int i = 0; i < count; i++)
+		{
+			// get command #i
+			ComPtr<IUserTileCommand> command;
+			if (SUCCEEDED(commands->GetAt(i, &command)))
+			{
+				int id;
+				command->get_Id(&id);
+				wprintf(L"Command id: %u\n", id);
+
+				// 0 => Account Info
+				// 1 => Lock
+				// 2 => Logoff
+			}
+		}
+		wprintf(L"\n");
+
+		// get number of switchable users
+		count = 0;
 		list->get_Size(&count);
 
 		for (unsigned int i = 0; i < count; i++)

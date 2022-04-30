@@ -1,6 +1,6 @@
 /* Header file automatically generated from UserTileMenu.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0231 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -70,11 +70,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
@@ -90,7 +90,7 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
@@ -122,11 +122,11 @@
 #endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -190,11 +190,11 @@
 #endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
 
 #if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x60000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -231,10 +231,28 @@ namespace ABI {
                 } /* StartUI */
             } /* Shell */
         } /* Internal */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser ABI::Windows::Internal::Shell::StartUI::IUserTileSwitchUser
 
 #endif // ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
+#define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Internal {
+            namespace Shell {
+                namespace StartUI {
+                    interface IUserTileCommand;
+                } /* StartUI */
+            } /* Shell */
+        } /* Internal */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand ABI::Windows::Internal::Shell::StartUI::IUserTileCommand
+
+#endif // ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_FWD_DEFINED__
@@ -247,7 +265,8 @@ namespace ABI {
                 } /* StartUI */
             } /* Shell */
         } /* Internal */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics ABI::Windows::Internal::Shell::StartUI::IUserTileMenuStatics
 
 #endif // ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_FWD_DEFINED__
@@ -255,6 +274,102 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#define DEF___FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("b83f9ee6-a7a0-52ac-9977-236f7a1e5d47"))
+IIterator<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> : IIterator_impl<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Internal.Shell.StartUI.IUserTileCommand>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t;
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+//#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#define DEF___FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("d9e9c6d4-33a2-508c-8b4b-939a57ce4f1d"))
+IIterable<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> : IIterable_impl<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Internal.Shell.StartUI.IUserTileCommand>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t;
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+//#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#define DEF___FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("532d1a48-40c6-5a54-a32e-37bd2961393d"))
+IVectorView<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> : IVectorView_impl<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Internal.Shell.StartUI.IUserTileCommand>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*> __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t;
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+//#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Internal::Shell::StartUI::IUserTileCommand*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -392,15 +507,58 @@ namespace ABI {
                         
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IUserTileSwitchUser=_uuidof(IUserTileSwitchUser);
+                    MIDL_CONST_ID IID & IID_IUserTileSwitchUser=_uuidof(IUserTileSwitchUser);
                     
                 } /* StartUI */
             } /* Shell */
         } /* Internal */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser;
 #endif /* !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
+ * Interface Windows.Internal.Shell.StartUI.IUserTileCommand
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Internal_Shell_StartUI_IUserTileCommand[] = L"Windows.Internal.Shell.StartUI.IUserTileCommand";
+namespace ABI {
+    namespace Windows {
+        namespace Internal {
+            namespace Shell {
+                namespace StartUI {
+                    /* [object, uuid("65d0daac-bc3d-45ab-8628-d3f30415135c"), contract] */
+                    MIDL_INTERFACE("65d0daac-bc3d-45ab-8628-d3f30415135c")
+                    IUserTileCommand : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_Id(
+                            /* [retval, out] */int * id
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE Invoke(void) = 0;
+                        
+                    };
+
+                    MIDL_CONST_ID IID & IID_IUserTileCommand=_uuidof(IUserTileCommand);
+                    
+                } /* StartUI */
+            } /* Shell */
+        } /* Internal */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand;
+#endif /* !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
@@ -429,23 +587,26 @@ namespace ABI {
                     IUserTileMenuStatics : public IInspectable
                     {
                     public:
-                        virtual HRESULT STDMETHODCALLTYPE UndefinedDontUse(void) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE GetCommands(
+                            /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * * commands
+                            ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetSwitchUserList(
                             /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser * * view
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetSwitchUserListWithCurrentUser(
                             /* [out] */ABI::Windows::Internal::Shell::StartUI::IUserTileSwitchUser * * user,
-                            /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser * * view
+                            /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser * * users
                             ) = 0;
                         
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IUserTileMenuStatics=_uuidof(IUserTileMenuStatics);
+                    MIDL_CONST_ID IID & IID_IUserTileMenuStatics=_uuidof(IUserTileMenuStatics);
                     
                 } /* StartUI */
             } /* Shell */
         } /* Internal */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics;
 #endif /* !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_INTERFACE_DEFINED__) */
@@ -490,6 +651,12 @@ typedef interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUse
 
 #endif // ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
+#define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand;
+
+#endif // ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics;
@@ -499,6 +666,279 @@ typedef interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStati
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+typedef struct __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl;
+
+interface __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+typedef  struct __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl;
+
+interface __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand;
+
+typedef struct __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+            /* [in] */ __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl;
+
+interface __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommandVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser_INTERFACE_DEFINED__)
@@ -893,6 +1333,102 @@ EXTERN_C const IID IID___x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwit
 
 /*
  *
+ * Interface Windows.Internal.Shell.StartUI.IUserTileCommand
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Internal_Shell_StartUI_IUserTileCommand[] = L"Windows.Internal.Shell.StartUI.IUserTileCommand";
+/* [object, uuid("65d0daac-bc3d-45ab-8628-d3f30415135c"), contract] */
+typedef struct __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommandVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
+
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *get_Id )(
+        __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This,
+        /* [retval, out] */int * id
+        );
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(
+        __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand * This
+        );
+    END_INTERFACE
+    
+} __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommandVtbl;
+
+interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand
+{
+    CONST_VTBL struct __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommandVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_AddRef(This) \
+        ( (This)->lpVtbl->AddRef(This) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_Release(This) \
+        ( (This)->lpVtbl->Release(This) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_get_Id(This,id) \
+    ( (This)->lpVtbl->get_Id(This,id) )
+
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_Invoke(This) \
+    ( (This)->lpVtbl->Invoke(This) )
+
+
+#endif /* COBJMACROS */
+
+
+EXTERN_C const IID IID___x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand;
+#endif /* !defined(____x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileCommand_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+/*
+ *
  * Interface Windows.Internal.Shell.StartUI.IUserTileMenuStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -940,8 +1476,9 @@ HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
     __RPC__in __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics * This,
     /* [OUT ] */ __RPC__out TrustLevel *trustLevel
     );
-HRESULT ( STDMETHODCALLTYPE *UndefinedDontUse )(
-        __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics * This
+HRESULT ( STDMETHODCALLTYPE *GetCommands )(
+        __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics * This,
+        /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileCommand * * commands
         );
     HRESULT ( STDMETHODCALLTYPE *GetSwitchUserList )(
         __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics * This,
@@ -950,7 +1487,7 @@ HRESULT ( STDMETHODCALLTYPE *UndefinedDontUse )(
     HRESULT ( STDMETHODCALLTYPE *GetSwitchUserListWithCurrentUser )(
         __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics * This,
         /* [out] */__x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileSwitchUser * * user,
-        /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser * * view
+        /* [out] */__FIVectorView_1_Windows__CInternal__CShell__CStartUI__CIUserTileSwitchUser * * users
         );
     END_INTERFACE
     
@@ -980,14 +1517,14 @@ interface __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics
 #define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_GetTrustLevel(This,trustLevel) \
         ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_UndefinedDontUse(This) \
-    ( (This)->lpVtbl->UndefinedDontUse(This) )
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_GetCommands(This,commands) \
+    ( (This)->lpVtbl->GetCommands(This,commands) )
 
 #define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_GetSwitchUserList(This,view) \
     ( (This)->lpVtbl->GetSwitchUserList(This,view) )
 
-#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_GetSwitchUserListWithCurrentUser(This,user,view) \
-    ( (This)->lpVtbl->GetSwitchUserListWithCurrentUser(This,user,view) )
+#define __x_ABI_CWindows_CInternal_CShell_CStartUI_CIUserTileMenuStatics_GetSwitchUserListWithCurrentUser(This,user,users) \
+    ( (This)->lpVtbl->GetSwitchUserListWithCurrentUser(This,user,users) )
 
 
 #endif /* COBJMACROS */

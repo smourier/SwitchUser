@@ -26,13 +26,22 @@ namespace Windows
 				}
 
 				[contract(Windows.Foundation.UniversalApiContract, 1.0)]
+				[uuid(65d0daac-bc3d-45ab-8628-d3f30415135c)]
+				interface IUserTileCommand : IInspectable
+				{
+					//HRESULT get_Destination([out][retval] int* jumpViewItemType);
+					HRESULT get_Id([out][retval] int* id);
+					HRESULT Invoke();
+				}
+
+				[contract(Windows.Foundation.UniversalApiContract, 1.0)]
 				[exclusiveto(Windows.Internal.Shell.StartUI.UserTileMenu)]
 				[uuid(1727f7b0-3bd5-4256-8e75-680f9f6cadb4)]
 				interface IUserTileMenuStatics : IInspectable
 				{
-					HRESULT UndefinedDontUse();
+					HRESULT GetCommands([out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileCommand*>** commands);
 					HRESULT GetSwitchUserList([out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileSwitchUser*>** view);
-					HRESULT GetSwitchUserListWithCurrentUser([out] Windows.Internal.Shell.StartUI.IUserTileSwitchUser** user, [out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileSwitchUser*>** view);
+					HRESULT GetSwitchUserListWithCurrentUser([out] Windows.Internal.Shell.StartUI.IUserTileSwitchUser** user, [out] Windows.Foundation.Collections.IVectorView<Windows.Internal.Shell.StartUI.IUserTileSwitchUser*>** users);
 				}
 
 				[activatable(Windows.Foundation.UniversalApiContract, 1.0)]
